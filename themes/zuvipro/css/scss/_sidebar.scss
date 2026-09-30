@@ -1,0 +1,91 @@
+/* Sidebar
+--------------------------------------*/
+/* Sidebar */
+.sidebar {
+  width: 100%;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+#sidebar-left, #sidebar-right {
+  padding: 0;
+}
+/* Sidebar -> Sidebar block */
+.sidebar .block {
+  margin-bottom: 2rem;
+  padding: 1.6rem;
+  background-color: var(--bg-content);
+  color: var(--color-text);
+  border-radius: 4px;
+}
+.sidebar a {
+  color: var(--sidebar-link-color);
+}
+.sidebar a:hover {
+  color: var(--color-primary);
+}
+/* Sidebar -> Form */
+.sidebar input[type="text"],
+.sidebar input[type="email"],
+.sidebar input[type="url"],
+.sidebar input[type="password"],
+.sidebar input[type="search"] {
+  background: transparent;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  outline: none;
+}
+.sidebar input[type="text"]:focus,
+.sidebar input[type="email"]:focus,
+.sidebar input[type="url"]:focus,
+.sidebar input[type="password"]:focus,
+.sidebar input[type="search"]:focus {
+  border: 1px solid var(--color-primary);
+}
+
+/* Animated Sidebar */
+.sliding-sidebar {
+  position: relative;
+  visibility: hidden;
+  z-index: 110;
+  transition: visibility 0s 0.4s;
+}
+.sliding-sidebar.animated-panel-is-visible {
+  visibility: visible;
+  transition: visibility 0s 0s;
+}
+.sliding-sidebar-container {
+  position: fixed;
+  top: 0;
+  width: 90%;
+  max-width: 360px;
+  height: 100%;
+  padding: 16px 20px;
+  background: var(--bg-content);
+  color: var(--color-text);
+  overflow-x: auto;
+  transition: transform 0.4s 0s;
+  box-shadow: -2px 0 4px #000000;
+}
+.animated-panel-from-right .sliding-sidebar-container {
+  right: 0;
+  transform: translate(100%, 0);
+}
+.animated-panel-from-left .sliding-sidebar-container {
+  left: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.animated-panel-is-visible .sliding-sidebar-container {
+  transition-delay: 0s;
+  transform: translate(0, 0);
+}
+.close-animated-sidebar {
+  position: absolute;
+  cursor: pointer;
+  right: 4px;
+  top: 4px;
+  line-height: unset;
+  z-index: 120;
+}
+.sliding-sidebar-container .block {
+  padding: 0 0 1.6rem 0;
+}

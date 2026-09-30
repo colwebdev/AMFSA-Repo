@@ -1,0 +1,150 @@
+<?php
+
+/**
+ * @file
+ * Contains ZuviPro theme override and preprocess functions.
+ */
+
+ /**
+  * Sanitise input urls.
+  */
+ function santise_val_url($url) {
+ 	if ($url != '') {
+
+ 		// Sanitise (remove all illegal characters) from url.
+ 		$url = filter_var($url, FILTER_SANITIZE_URL);
+
+ 		// Validate url.
+ 		if (filter_var($url, FILTER_VALIDATE_URL) == TRUE) {
+ 			$url = $url;
+ 		} else {
+ 			$url = '#';
+ 		}
+ 		return $url;
+ 	}
+ }
+
+ /**
+ * ZuviPro page preprocess.
+ * Define variables for theme settings.
+ */
+function zuvipro_preprocess_page(array &$variables) {
+	$config = \Drupal::config('system.site');
+	$variables['site_name'] = $config->get('name');
+	$variables['site_slogan'] = $config->get('slogan');
+	$variables['container_width'] = theme_get_setting('container_width', 'zuvipro');
+	$variables['header_width'] = theme_get_setting('header_width', 'zuvipro');
+	$variables['main_width'] = theme_get_setting('main_width', 'zuvipro');
+	$variables['footer_width'] = theme_get_setting('footer_width', 'zuvipro');
+	$variables['preloader_option'] = theme_get_setting('preloader_option', 'zuvipro');
+	$variables['fancy_cursor'] = theme_get_setting('fancy_cursor', 'zuvipro');
+	$variables['animated_content'] = theme_get_setting('animated_content', 'zuvipro');
+	$variables['slider_wave'] = theme_get_setting('slider_wave', 'zuvipro');
+	$variables['all_icons_show'] = theme_get_setting('all_icons_show', 'zuvipro');
+	$variables['facebook_url'] = santise_val_url(theme_get_setting('facebook_url', 'zuvipro'));
+	$variables['twitter_url'] = santise_val_url(theme_get_setting('twitter_url', 'zuvipro'));
+	$variables['instagram_url'] = santise_val_url(theme_get_setting('instagram_url', 'zuvipro'));
+	$variables['linkedin_url'] = santise_val_url(theme_get_setting('linkedin_url', 'zuvipro'));
+	$variables['youtube_url'] = santise_val_url(theme_get_setting('youtube_url', 'zuvipro'));
+	$variables['vimeo_url'] = santise_val_url(theme_get_setting('vimeo_url', 'zuvipro'));
+  $variables['telegram_url'] = santise_val_url(theme_get_setting('telegram_url', 'zuvipro'));
+  $variables['whatsapp_url'] = santise_val_url(theme_get_setting('whatsapp_url', 'zuvipro'));
+  $variables['github_url'] = santise_val_url(theme_get_setting('github_url', 'zuvipro'));
+	$variables['vk_url'] = santise_val_url(theme_get_setting('vk_url', 'zuvipro'));
+	$variables['social_new_icon_code'] = theme_get_setting('social_new_icon_code', 'zuvipro');
+	$variables['sticky_header_option'] = theme_get_setting('sticky_header_option', 'zuvipro');
+	$variables['animated_sidebar_option'] = theme_get_setting('animated_sidebar_option', 'zuvipro');
+	$variables['front_sidebar'] = theme_get_setting('front_sidebar');
+	$variables['footer_wave'] = theme_get_setting('footer_wave', 'zuvipro');
+	$variables['scrolltotop_on'] = theme_get_setting('scrolltotop_on', 'zuvipro');
+	$variables['copyright_text'] = theme_get_setting('copyright_text', 'zuvipro');
+	$variables['fontawesome_four'] = theme_get_setting('fontawesome_four', 'zuvipro');
+	$variables['fontawesome_five'] = theme_get_setting('fontawesome_five');
+	$variables['fontawesome_six'] = theme_get_setting('fontawesome_six', 'zuvipro');
+	$variables['bootstrapicons'] = theme_get_setting('bootstrapicons', 'zuvipro');
+	$variables['material_icon_outlined'] = theme_get_setting('material_icon_outlined', 'zuvipro');
+	$variables['material_icon_filled'] = theme_get_setting('material_icon_filled', 'zuvipro');
+	$variables['material_icon_round'] = theme_get_setting('material_icon_round', 'zuvipro');
+	$variables['material_icon_sharp'] = theme_get_setting('material_icon_sharp', 'zuvipro');
+	$variables['material_icon_tone'] = theme_get_setting('material_icon_tone', 'zuvipro');
+  $variables['copyright_custom'] = theme_get_setting('copyright_custom', 'zuvipro');
+  $variables['cookie_message'] = theme_get_setting('cookie_message', 'zuvipro');
+	$variables['cookie_custom'] = theme_get_setting('cookie_custom', 'zuvipro');
+	$variables['page_front'] = \Drupal::service('path.matcher')->isFrontPage();
+	$variables['page_share_all'] = theme_get_setting('page_share_all', 'zuvipro');
+	$variables['page_share_front'] = theme_get_setting('page_share_front', 'zuvipro');
+	$variables['page_share_page'] = theme_get_setting('page_share_page', 'zuvipro');
+	$variables['page_share_article'] = theme_get_setting('page_share_article', 'zuvipro');
+	$variables['page_share_other'] = theme_get_setting('page_share_other', 'zuvipro');
+}
+
+/**
+ * Node preprocess.
+ */
+function zuvipro_preprocess_node(array &$variables) {
+	$variables['node_author_pic'] = theme_get_setting('node_author_pic', 'zuvipro');
+}
+
+/**
+ * Comment preprocess.
+ */
+function zuvipro_preprocess_comment(array &$variables) {
+	$variables['comment_user_pic'] = theme_get_setting('comment_user_pic', 'zuvipro');
+}
+
+/**
+ * Html preprocess for zuvipro theme.
+ * Adds body classes if certain regions have content.
+ * Used for creating different page layout.
+ */
+function zuvipro_preprocess_html(&$variables) {
+	$variables['base_path'] = base_path();
+	$variables['insert_head'] = theme_get_setting('insert_head');
+	$variables['head_code'] = theme_get_setting('head_code');
+	$variables['insert_body_start'] = theme_get_setting('insert_body_start');
+	$variables['body_start_code'] = theme_get_setting('body_start_code');
+	$variables['insert_body_end'] = theme_get_setting('insert_body_end');
+	$variables['body_end_code'] = theme_get_setting('body_end_code');
+	$variables['styling'] = theme_get_setting('styling', 'zuvipro');
+	$variables['styling_code'] = theme_get_setting('styling_code', 'zuvipro');
+
+  // color
+  $variables['color_scheme'] = theme_get_setting('color_scheme');
+	$variables['bg_body'] = theme_get_setting('bg_body');
+  $variables['bg_header'] = theme_get_setting('bg_header');
+  $variables['color_primary'] = theme_get_setting('color_primary');
+  $variables['color_secondary'] = theme_get_setting('color_secondary');
+  $variables['block_bg'] = theme_get_setting('block_bg');
+  $variables['color_light'] = theme_get_setting('color_light');
+  $variables['color_border'] = theme_get_setting('color_border');
+  $variables['color_text'] = theme_get_setting('color_text');
+  $variables['color_heading'] = theme_get_setting('color_heading');
+	$variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+	$is_home = \Drupal::service('path.matcher')->isFrontPage();
+
+}
+
+/**
+ * Add current page to breadcrumb.
+ */
+function zuvipro_preprocess_breadcrumb(&$variables) {
+	$request = \Drupal::request();
+	$route_match = \Drupal::routeMatch();
+	$page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+	if (!empty($page_title)) {
+		$variables['breadcrumb'][] = [
+			'text' => $page_title,
+		];
+		// Add cache context based on url.
+		$variables['#cache']['contexts'][] = 'url';
+	}
+}
+/**
+ * Fix Drupal system message templete file suggestion.
+ */
+use Drupal\Core\Render\Element\StatusMessages;
+
+function zuvipro_preprocess_block__system_messages_block(&$variables) {
+  $variables['content'] = StatusMessages::renderMessages();
+	$variables['#cache']['max-age'] = 0;
+}

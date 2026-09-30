@@ -1,0 +1,24 @@
+# Composer dependencies
+/vendor/
+# Drupal core and Composer-managed extensions
+/core/
+/modules/contrib/
+/profiles/contrib/
+/themes/contrib/
+# Drupal local settings and services files
+/sites/*/*settings*.php
+!/sites/*/default.settings.php
+/sites/*/*services*.yml
+!/sites/*/default.services.yml
+# User-uploaded and private files
+/sites/*/files/
+/sites/*/private/
+# Drupal test files
+/sites/simpletest/
+# Local editor and operating system files
+.DS_Store
+.idea/
+.vscode/
+# Database backups
+*.sql
+*.sql.gz

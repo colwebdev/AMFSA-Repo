@@ -1,0 +1,100 @@
+/* Footer
+--------------------------------------*/
+/* Footer top */
+.footer-top {
+  background-color: var(--bg-header);
+}
+.region-footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+/* Footer Four Blocks */
+.footer-blocks {
+  background-color: var(--bg-header);
+  padding: 1rem 0;
+}
+.footer-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer-block {
+  flex: 1 0 270px;
+}
+.footer-block .block p:last-of-type {
+  margin: 0;
+}
+.region-footer-first,
+.region-footer-second,
+.region-footer-third,
+.region-footer-fourth {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* Footer bottom */
+.footer-bottom {
+  background-color: var(--bg-header);
+  padding: 1rem 0; 
+}
+.region-footer-bottom {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.region-footer-bottom .block {
+  flex: 1 1 100%;
+}
+/* Footer bottom last */
+.footer-bottom-last {
+  background-color: var(--bg-content);
+  padding: 1.5rem 0;
+}
+.footer-bottom-last-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+/* Footer -> Social icons. */
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.social-icons li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.social-icons li a {
+  display: inline-grid;
+  place-content: center;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-secondary);
+  border-right: 3px solid var(--color-secondary);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+.social-icons li a:hover {
+  color: var(--color-primary);
+  border: 3px solid #ffffff;
+}
+.social-icons i {
+  font-size: 1.2rem;
+}
+/* Footer wave */
+.footer-wave svg {
+  display: block;
+	fill: var(--bg-header);
+}

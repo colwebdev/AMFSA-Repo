@@ -1,0 +1,96 @@
++===============================+
+Version 10.1.0
+25 Dec, 2022
++===============================+
+# Intial release of 10.x.x series.
+
+
++===============================+
+Version 10.1.1
+27 Jan, 2023
++===============================+
+# Fixed minor known issues.
+
+
++===============================+
+Version 10.1.2
+03 June, 2024
++===============================+
+# Updated twitter icon with the new X icon.
+# Changed close cursor icon of full page search.
+# Other minor fixes.
+
+
++===============================+
+Version 10.1.3
+06 June, 2024
++===============================+
+# Added options for layout: container width, header, main, footer.
+# Custom scrollbar.
+# Removed header circle options from theme settings.
+# Added styling for EU Cookie Compliance module.
+# Updated fontawesome font icons to version 5.15.4
+# Added fontaweosme version 6.4.2
+# Added bootstrap font icons.
+# Updated Google material font icons.
+
+
++===============================+
+Version 11.0.0
+09 Aug, 2024
++===============================+
+# Initial release of 11.x.x series.
+# Drupal 11 compatible.
+
+
++===============================+
+Version 11.0.1
+27 Aug, 2024
++===============================+
+# Fixed slider issue in Drupal 11
+# Removed Owl Carousel by tiny slider.
+# Requires new slider code on old websites.
+# New block regions Slider, Copyright and Cookie Consent Message.
+# Added new slider styles: Basic, Basic with image, Classic, Layered
+# Unlimited number of sliders can now be created.
+# Slider can now be displayed on multiple pages.
+# Custom copyright text should be added via block region.
+# Cookie consent message should be added via block region.
+
+
++===============================+
+Version 11.0.2
+04 Nov, 2024
++===============================+
+# Fixed color settings issues.
+# Fixed minor known bugs.
+
+
++===============================+
+Version 11.1.0
+09 Jan, 2025
++===============================+
+# Moved footer top block region below wave shape.
+# Modified footer bottom block region into two column layout.
+# Node submitted details now displays time in Drupal format.
+# Removed display of tags in submitted details.
+# New template files:
+/templates/navigation/menu.html.twig
+/templates/navigation/menu-local-action.html.twig
+/templates/navigation/pager.html.twig
+/templates/views/views-view.html.twig
+/templates/views/views-mini-pager.html.twig
+
+# Added styling for view mini pager.
+# Removed page share option for book type nodes.
+# Added translation for 'Share this page' text.
+# Fixed system message display issue in newer versions of Drupal 10 and 11.
+# Updated fontawesome6 to version 6.7.2
+# FIxed other minor bugs.
+
+
++===============================+
+Version 11.1.1
+15 Jan, 2025
++===============================+
+# Fixed display of animated content in mobile devices.

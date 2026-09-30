@@ -1,0 +1,184 @@
+/* Layout
+----------------------------------- */
+.full-width {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 575px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+#main-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 2em 0;
+}
+.main-container {
+  position: relative;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.no-sidebar .main-container,
+.sidebar-left .main-container,
+.sidebar-right .main-container,
+.two-sidebar .main-container {
+  grid-template-columns: 100%;
+}
+#main {
+  order: 1;
+  margin-bottom: 2em;
+}
+#sidebar-left {
+  order: 2;
+  padding: 0;
+}
+#sidebar-right {
+  order: 3;
+  padding: 0;
+}
+/* columns */
+.row {
+  width: 100%;
+  clear: both;
+  margin-bottom: 1rem;
+}
+.full {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+}
+.item {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+/* Responsive columns */
+.flex,
+.grid,
+.items,
+.columns,
+.grid-container,
+.flex-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+.flex,
+.flex-container,
+.columns {
+  display: flex;
+}
+.flex-container,
+.columns {
+  flex-wrap: wrap;
+}
+.grid {
+  display: grid;
+}
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+}
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+.grid-item img,
+.item img {
+  display: block;
+}
+/* Create Equal width columns with no gap */
+.column {
+  flex: 1 1 230px;
+}
+/* Flex column of un-equal width */
+.w10,
+.w20,
+.w30,
+.w40,
+.w50,
+.w60,
+.w70,
+.w80,
+.w90,
+.w100 {
+  flex: 1 1 100%;
+}
+/* Flex and Grid properfies
+------------------------- */
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.v-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.h-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.vh-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: end;
+}
+.gap {
+  gap: 1rem;
+}
+.gap-2x {
+  gap: 2rem;
+}
+.gap-small {
+  gap: 0.5rem;
+}
+.no-gap {
+  gap: 0;
+}
+/* Flex properties */
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+/* grid properties */
+.grid-center {
+  display: grid;
+  place-content: center;
+}

@@ -1,0 +1,55 @@
+Google material font icons
++---------------------------+
+https://fonts.google.com/icons
+https://github.com/google/material-design-icons
+
+
+FontAwesome font icons
++---------------------------+
+https://fontawesome.com/
+
+
+Bootstrap Font Icons
++---------------------------+
+https://icons.getbootstrap.com/
+
+
+Google web font
++---------------------------+
+https://fonts.google.com/
+
+
+Open Sans Font by: Steve Matteson
+https://twitter.com/@SteveMatteson1
+https://fonts.google.com/specimen/Open+Sans
+
+
+Roboto Font by: Christian Robertson
+https://fonts.google.com/specimen/Roboto
+
+
+Tiny Slider
++---------------------------+
+https://github.com/ganlanyuan/tiny-slider
+
+
+Cookie Alert by Wruczek
++---------------------------+
+https://github.com/Wruczek/Bootstrap-Cookie-Alert
+
+
+jQuery-viewport-checker
++---------------------------+
+https://github.com/dirkgroenen/jQuery-viewport-checker
+
+
+Demo images
++---------------------------+
+https://undraw.co/
+
+
+
+Please Note:
+Images used in this theme are for demo purpose only.
+All images are copyrighted to their respective owners.
+They should not be used on your website.

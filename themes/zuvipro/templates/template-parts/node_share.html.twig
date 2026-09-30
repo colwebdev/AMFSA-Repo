@@ -1,0 +1,13 @@
+{% if node.getType == 'page' %}
+  {% if page_share_page %}
+    {% include '@zuvipro/template-parts/share-node.html.twig' %}
+  {% endif %}
+{% elseif node.getType == 'article' %}
+  {% if page_share_article %}
+    {% include '@zuvipro/template-parts/share-node.html.twig' %}
+  {% endif %}
+{% else %}
+  {% if page_share_other %}
+    {% include '@zuvipro/template-parts/share-node.html.twig' %}
+  {% endif %}
+{% endif %}

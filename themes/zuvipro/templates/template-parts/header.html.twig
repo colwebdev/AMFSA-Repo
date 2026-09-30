@@ -1,0 +1,56 @@
+<!-- Start: Header -->
+{% if preloader_option %}
+  <div class="loader">
+    <div class="loader-inner">
+      <div class="loader-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+{% endif %}
+<header class="header full-wdth">
+  <div class="container">
+    <div class="header-main">
+    {% if page.site_branding %}
+      <div class="site-brand">
+        {{ page.site_branding }}
+      </div> <!--/.site-branding -->
+    {% endif %}
+    {% if page.primary_menu or page.search_box %}
+      <div class="header-main-right">
+        {% if page.primary_menu %}
+          <div class="mobile-menu header-circle-icons" aria-label="Main Menu">
+            <div class="mobile-menu-bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div> {# mobile-menu #}
+          <div class="primary-menu-wrapper">
+            <div class="menu-wrap">
+              <div class="close-mobile-menu header-circle-icons"><i class="ficon-close" aria-hidden="true"></i></div>
+              {{ page.primary_menu }}
+            </div><!-- /.menu-wrap -->
+          </div><!-- /.primary-menu-wrapper -->
+        {% endif %}
+        {% if page.search_box %}
+          {% include '@zuvipro/template-parts/search.html.twig' %}
+        {% endif %}
+        {% if animated_sidebar_option %}
+        <div class="sliding-panel-icon header-circle-icons">
+          <div class="sliding-sidebar-icon" aria-label="Open Sliding sidebar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      {% endif %}
+      </div> <!-- /.header-right -->
+    {% endif %}
+    </div> <!-- /.header-main -->
+  </div> <!-- /.container -->
+  {% if not is_front %}
+    {% include '@zuvipro/template-parts/header-page.html.twig' %}
+  {% endif %}
+</header>
